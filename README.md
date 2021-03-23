@@ -1,17 +1,40 @@
 # cds-visual_Assignment_4
 
 
-Steps to run the first script 'Logistic_Regression.py':
+***Assignment for visual analytics class at Aarhus University.***
 
- - Git clone this repository
+***2021-03-23***
+
+
+# Classification benchmarks
+
+
+
+
+
+
+# Instructions to run the code
+
+
+Preparation:
+
  - Open terminal on worker02
- - Type: cd cds-visual
- - Activate the environment (seaborn module did not work without it), type: source ./cv101/bin/activate
+ - Navigate to the environment where you want to clone this repository, e.g. type: cd cds-visual
+ - Clone the repository, type: git clone 
+ - Navigate to the newly cloned repo, type: cd 
+ - Create virtual environment with its dependencies, type: bash create_classification_venv.sh
+ - Activate the environment, type: source ./classification/bin/activate
+ - Continue with running the scripts, see intructions below
+
+Running the scripts:
+
  - Navigate to the directory of the script, type: cd src
- - Run the script, type:  python Logistic_Regression.py
- - To find out possible optional arguments, type: python Logistic_Regression.py --help
+ - Run Logistic regression model script, type:  python Logistic_Regression.py
+ - Run Neural Network script, type: python Neural_Network.py
+ - To find out possible optional arguments for both scripts, type: python Logistic_Regression.py --help   or   python Neural_Network.py --help
+
+ - To remove newly created virtual environment from worker02, type: bash kill_classification_venv
 
 
 
 
-Steps to run the second script 'Neural_Network.py':
