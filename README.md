@@ -20,7 +20,7 @@ Preparation:
 
  - Open terminal on worker02
  - Navigate to the environment where you want to clone this repository, e.g. type: cd cds-visual
- - Clone the repository, type: git clone 
+ - Clone the repository, type: git clone https://github.com/Rutatu/cds-visual_Assignment_4.git
  - Navigate to the newly cloned repo, type: cd cds-visual_Assignment_4
  - Create virtual environment with its dependencies, type: bash create_classification_venv.sh
  - Activate the environment, type: source ./classification/bin/activate
