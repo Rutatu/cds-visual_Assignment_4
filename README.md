@@ -10,15 +10,16 @@
 
 ## About the script
 
-This assignment is Class Assignment 4. The task was to create two simple command-line tools/Python scripts which can be used to perform a simple classification task on the MNIST digits data.  These classifiers are trained to classify images of digits according to their corresponding labels. After that, the tests are performed and evaluation of the models´ accuracy is coducted:
-- One script takes the full MNIST data set, trains a Logistic Regression Classifier, prints the evaluation metrics to the terminal and saves classification report and confusion matrix in a directory
-- Another script takes the full MNIST dataset, trains a Neural Network classifier, prints the evaluation metrics to the terminal, and saves classification report in a directory
+This assignment is Class Assignment 4. The task was to create two simple command-line tools/Python scripts which can be used to perform a simple classification task on the MNIST digits data:
+One script takes the full MNIST data set, trains a Logistic Regression (LR) Classifier, prints the evaluation metrics to the terminal and saves classification report and confusion matrix in a directory
+Another script takes the full MNIST dataset, trains a Neural Network (NN) classifier, prints the evaluation metrics to the terminal, and saves classification report in a directory
 
 These scripts can then be used to provide easy-to-understand benchmark scores for evaluating these models.
 
+
 ## Methods
 
-The problem of the task relates to classifying digits. To address this problem, first I trained a simple Logistic Regression classifier on a training set (80% of the data) and tested the performance of the classifier on a test set (20% of the data). For the second script, I trained a Neural Network (NN) using a utility script which was developed in class (it can be found in the utils folder on this github repository). Trained NN had 2 hidden layers out of possible 3 layers. The sizes of the layers were 32 and 16 with a sigmoid activation function. The  NN was trained for 500 epochs.
+The problem of the task relates to classifying digits. To address this problem, first I trained a simple LR classifier on a training set (80% of the data) and tested the performance of the classifier on a test set (20% of the data). I used the ```scikit-learn``` package for the LR classifier. For the second script, I trained a NN classifier using utility script which was developed in class (it can be found in the utils folder on github repository). Trained NN had 2 hidden layers out of possible 3 layers. The sizes of the layers were 32 and 16 with a sigmoid activation function. The  NN was trained for 500 epochs.
 
 ## Repository contents
 
@@ -131,7 +132,7 @@ I hope it worked!
 
 ## Results
 
-Logistic regression classifier achieved a weighted average accuracy of 92% for correctly classifying digits. Digits 3, 5 and 8 were the most challenging to classify. The Neural Network classifier achieved a weighted average accuracy of 96%, which is a slight improvement from LR classifier.
+LR classifier achieved a weighted average accuracy of 92% for correctly classifying digits. Digits 3, 5 and 8 were the most challenging to classify. The NN classifier achieved a weighted average accuracy of 96%, which is a slight improvement from LR classifier.
 For more information consult classification reports and confusion matrices in the 'out' folder.
 
 
