@@ -25,14 +25,14 @@ The problem of the task relates to classifying digits. To address this problem, 
 | File | Description |
 | --- | --- |
 | out | Folder containing files produced by the scripts |
-| out/logReg_confusion_matrix.png | Classification metrics of the model |
-| out/logReg_report.csv | Model´s performance graph |
-| out/NN_report.csv | Depiction of CNN model´s architecture used |
+| out/logReg_confusion_matrix.png | Confusion matrix of LR classifier |
+| out/logReg_report.csv | Classification metrics of the LR classifier |
+| out/NN_report.csv | Classification metrics of the NN classifier |
 | src | Folder containing the scripts |
 | src/Logistic_Regression.py | Logistic Regression classifier script |
 | src/Neural_Network.py | Neural Network classifier script |
 | README.md | Description of the assignment and the instructions |
-| create_classification_venv.bash | bash file for creating a virtual environmment  |
+| create_classification_venv.bash | bash file for creating a virtual environmment |
 | kill_classification_venv.bash | bash file for removing a virtual environment |
 | requirements.txt | list of python packages required to run the script |
 
