@@ -31,6 +31,9 @@ The problem of the task relates to classifying digits. To address this problem, 
 | src | Folder containing the scripts |
 | src/Logistic_Regression.py | Logistic Regression classifier script |
 | src/Neural_Network.py | Neural Network classifier script |
+| utils/ | Folder containing utility scripts for the project  |
+| utils/classifier_utils.py | utility script used in LR classifier script |
+| utils/neuralnetwork.py | utility script used in NN classifier script |
 | README.md | Description of the assignment and the instructions |
 | create_classification_venv.bash | bash file for creating a virtual environmment |
 | kill_classification_venv.bash | bash file for removing a virtual environment |
