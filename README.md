@@ -51,17 +51,27 @@ Both codes were tested on an HP computer with Windows 10 operating system. They 
 
 __Codes parameters__
 
-Logistic Regression classifier:                                                    Neural Network classifier:
+```Logistic Regression classifier```       
 
-| Parameter | Description |                                                        | Parameter | Description |
-| --- | --- |                                                                      | --- | --- |
-| train_data | Directory of training data |                                        | train_data | Directory of training data |
-| val_data | Directory of validation data |                                        | val_data | Directory of validation data |
-| learning_rate | Learning rate. Default = 0.01 |                                  | learning_rate | Learning rate. Default = 0.01 |
-| optimizer | Optimizer. Default = SGD |                                           | optimizer | Optimizer. Default = SGD |
-| epochs | Number of epochs. Default = 50 |                                        | epochs | Number of epochs. Default = 50 |
+| Parameter | Description |                                              
+| --- | --- |                                                                    
+| train_data | Directory of training data |                                       
+| val_data | Directory of validation data | 
+| learning_rate | Learning rate. Default = 0.01 |
+| optimizer | Optimizer. Default = SGD |                               
+| epochs | Number of epochs. Default = 50 |                                        
 
 
+```Neural Network classifier```
+ 
+| Parameter | Description |                                              
+| --- | --- |                                                                    
+| train_data | Directory of training data |                                       
+| val_data | Directory of validation data | 
+| learning_rate | Learning rate. Default = 0.01 |
+| optimizer | Optimizer. Default = SGD |                               
+| epochs | Number of epochs. Default = 50 |   
+ 
 
 
 
