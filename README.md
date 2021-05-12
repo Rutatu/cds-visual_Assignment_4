@@ -25,22 +25,23 @@ The problem of the task relates to classifying digits. To address this problem, 
 | File | Description |
 | --- | --- |
 | out | Folder containing files produced by the scripts |
-| out/ | Classification metrics of the model |
-| out/ | Model´s performance graph |
-| out/ | Depiction of CNN model´s architecture used |
-| src | Folder containing the script |
-| src/ | The script |
+| out/logReg_confusion_matrix.png | Classification metrics of the model |
+| out/logReg_report.csv | Model´s performance graph |
+| out/NN_report.csv | Depiction of CNN model´s architecture used |
+| src | Folder containing the scripts |
+| src/Logistic_Regression.py | Logistic Regression classifier script |
+| src/Neural_Network.py | Neural Network classifier script |
 | README.md | Description of the assignment and the instructions |
-|  | bash file for creating a virtual environmment  |
-|  | bash file for killing a virtual environment |
+| create_classification_venv.bash | bash file for creating a virtual environmment  |
+| kill_classification_venv.bash | bash file for removing a virtual environment |
 | requirements.txt | list of python packages required to run the script |
 
 
 ## Data
 
-For this project I used a MNIST database containing handwritten digits with a training set of 60,000 examples, and a test set of 10,000 examples. It is a subset of a larger set available from NIST. The digits have been size-normalized and centered in a fixed-size image.
+The MNIST database contains small square 28×28 pixel grayscale images of handwritten single digits between 0 and 9. A training set contains 60,000 examples, and a test set 10,000 examples. It is a subset of a larger set available from NIST. The digits have been size-normalized and centered in a fixed-size image.
 
-The data was loaded using command ```fetch_openml```. The dataset name is  "mnist_784", and version=1.
+The data was loaded using command ```fetch_openml```. The dataset name is  mnist_784, and version=1.
 
 Link to data: http://yann.lecun.com/exdb/mnist/
 
@@ -51,27 +52,29 @@ Both codes were tested on an HP computer with Windows 10 operating system. They 
 
 __Codes parameters__
 
+
 ```Logistic Regression classifier```       
 
 | Parameter | Description |                                              
 | --- | --- |                                                                    
-| train_data | Directory of training data |                                       
-| val_data | Directory of validation data | 
-| learning_rate | Learning rate. Default = 0.01 |
-| optimizer | Optimizer. Default = SGD |                               
-| epochs | Number of epochs. Default = 50 |                                        
+| train_size (trs) | The size of the training data as a percentage. Default = 0.8 (80%) |                                       
+| test_size (tes) | The size of the testing data as a percentage. Default = 0.2 (20%) | 
+| name (n) | Name of the classification report to be saved as .csv file. Default = logReg_report |                                       
 
 
 ```Neural Network classifier```
  
 | Parameter | Description |                                              
 | --- | --- |                                                                    
-| train_data | Directory of training data |                                       
-| val_data | Directory of validation data | 
-| learning_rate | Learning rate. Default = 0.01 |
-| optimizer | Optimizer. Default = SGD |                               
-| epochs | Number of epochs. Default = 50 |   
+| train_size (trs) | The size of the training data as a percentage. Default = 0.8 (80%) |                                       
+| test_size (tes) | The size of the testing data as a percentage. Default = 0.2 (20%) | 
+| hidden_layer_1 (hl1) | Size of the hidden layer 1. Default = 32 |
+| hidden_layer_2 (hl2) | Size of the hidden layer 2. Default = 16 |                               
+| hidden_layer_3 (hl3) | Size of the hidden layer 3. Default = 0 |  
+| epochs (ep) | Defines how many times the learning algorithm will work through the entire training dataset. Default = 500 |
+| name (n) | Name of the classification report to be saved as .csv file. Default = NN_report |
  
+Note: In order to define only hidden_layer_1, user must input hidden_layer_2 as 0.
 
 
 
@@ -100,15 +103,20 @@ Run the code:
 $ cd src
 
 #7 Run each code with default parameters
-$ python 
+$ python Logistic_Regression.py
+$ python Neural_Network.py
 
 #8 Run each code with self-chosen parameters
-$ python 
+$ python Logistic_Regression.py -trs 0.9 -tes 0.1 -n lr_cm.csv
+$ python Neural_Network.py -trs 0.7 -tes 0.3 -hl1 30 -hl2 15 -hl3 5 -ep 500 -n classification_report
 
-#9 To remove the newly created virtual environment
+#9 Run the NN script only with hidden_layer_1:
+$ python Neural_Network.py -hl1 30 -hl2 0
+
+#10 To remove the newly created virtual environment
 $ bash kill_classification_venv
 
-#10 To find out possible optional arguments for both scripts
+#11 To find out possible optional arguments for both scripts
 $ python Logistic_Regression.py --help
 $ python Neural_Network.py --help
 
