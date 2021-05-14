@@ -118,7 +118,7 @@ $ python Neural_Network.py -trs 0.7 -tes 0.3 -hl1 30 -hl2 15 -hl3 5 -ep 500 -n c
 $ python Neural_Network.py -hl1 30 -hl2 0
 
 #10 To remove the newly created virtual environment
-$ bash kill_classification_venv
+$ bash kill_classification_venv.sh
 
 #11 To find out possible optional arguments for both scripts
 $ python Logistic_Regression.py --help
