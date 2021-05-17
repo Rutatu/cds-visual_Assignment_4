@@ -111,7 +111,7 @@ $ python Logistic_Regression.py
 $ python Neural_Network.py
 
 #8 Run each code with self-chosen parameters
-$ python Logistic_Regression.py -trs 0.9 -tes 0.1 -n lr_cm.csv
+$ python Logistic_Regression.py -trs 0.9 -tes 0.1 -n lr_cm
 $ python Neural_Network.py -trs 0.7 -tes 0.3 -hl1 30 -hl2 15 -hl3 5 -ep 500 -n classification_report
 
 #9 Run the NN script only with hidden_layer_1:
