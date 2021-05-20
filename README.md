@@ -1,7 +1,7 @@
 # cds-visual_Assignment_4
 
 
-*** Class assignment for visual analytics class at Aarhus University.***
+***Class assignment for visual analytics class at Aarhus University.***
 
 ***2021-03-23***
 
